@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.contact-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    margin: 20px;
+    text-align: center;
+}
+
+.contact-photo {
+    width: 100%;
+    height: auto;
+}
+
+.contact-desc {
+    padding: 20px;
+}
+
+.contact-desc h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.contact-desc p {
+    color: #666;
+    font-size: 16px;
+}

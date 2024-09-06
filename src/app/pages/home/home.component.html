@@ -1,0 +1,28 @@
+<div class="home-container">
+  <main class="body-section" *ngIf="!loggedIn">
+    <h1>Welcome to Our Website</h1>
+    <p>Explore our services and get in touch with us for more information.</p>
+  </main>
+
+  <!-- <main class="body-section" *ngIf="loggedIn && userType === 'RIDER'">
+    <h1>Get Your First Ride {{username}}</h1>
+  </main> -->
+
+
+  <div *ngIf = "loggedIn && userType === 'RIDER'">
+    <map></map>
+  </div>
+
+  <main class="body-section" *ngIf="loggedIn && userType === 'DRIVER'">
+    <h1>Start Earning money {{username}}</h1>
+  </main>
+
+  <div *ngIf="loggedIn && userType === 'DRIVER'">
+    <p>This is a paragraph for driver</p>
+  </div>
+  
+  <footer class="footer">
+    <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+</div>

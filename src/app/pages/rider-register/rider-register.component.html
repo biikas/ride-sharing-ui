@@ -1,0 +1,42 @@
+<!-- rider.component.html -->
+<div class="form-container">
+  <form [formGroup]="riderRegisterForm" class="form" >
+    <h2>Rider Registration</h2>
+    
+    
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" formControlName="firstName" placeholder="Enter your first name">
+      
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" formControlName="lastName" placeholder="Enter your last name">
+      
+    </div>
+
+    <div class="form-group">
+      <label for="emailAddress">Email Address</label>
+      <input type="email" id="emailAddress" formControlName="emailAddress" placeholder="Enter your email">
+      
+    </div>
+    
+    <div class="form-group">
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="text" id="mobileNumber" formControlName="mobileNumber" placeholder="Enter your mobile number">
+      
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username" placeholder="Enter your username">
+      
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" placeholder="Enter your password">
+      
+    </div>
+    <button [disabled]="riderRegisterForm.invalid" (click)="register()">Register</button>
+  </form>
+</div>
