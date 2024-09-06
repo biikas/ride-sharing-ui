@@ -1,0 +1,18 @@
+
+app:
+  name: Spring Generic
+spring:
+  profiles.active: test
+  main.allow-bean-definition-overriding: true
+  main.allow-circular-references: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+
+
+server:
+  port: 5555
+  servlet:
+    context-path: /
+
+allowed.origins: '*'
