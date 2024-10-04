@@ -1,0 +1,31 @@
+<nb-layout>
+    <nb-layout-column>
+      <nb-card class="stopwatch-card">
+        <nb-card-header>
+          <h2>Stopwatch</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="stopwatch-container">
+            <!-- Time Display Section -->
+            <div class="time-section">
+              <div class="stopwatch-time">{{ displayTime }}</div>
+            </div>
+  
+            <!-- Button Group -->
+            <div class="button-group">
+              <button nbButton status="success" (click)="start()" class="start-button">Start
+                <!-- <nb-icon icon="play-outline"></nb-icon> Start -->
+              </button>
+              <button nbButton status="danger" (click)="stop()" class="stop-button">
+                <!-- <nb-icon icon="pause-outline"></nb-icon> Stop -->Stop
+              </button>
+              <button nbButton status="primary" (click)="reset()" class="reset-button">Reset
+                <!-- <nb-icon icon="refresh-outline"></nb-icon> Reset -->
+              </button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </nb-layout-column>
+  </nb-layout>
+  

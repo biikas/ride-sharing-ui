@@ -1,0 +1,76 @@
+.stopwatch-card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  
+    nb-card-header {
+      background-color: #f7f7f7;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 20px;
+  
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+  
+    nb-card-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px; /* Adjust height to ensure proper centering */
+    }
+  }
+  
+  .stopwatch-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+    .time-display {
+      font-size: 48px; /* Increase size for better visibility */
+      font-family: monospace;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .controls-section {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+  
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+  
+      .start-button {
+        background-color: #28a745; /* Green for start */
+        color: #fff;
+      }
+  
+      .stop-button {
+        background-color: #dc3545; /* Red for stop */
+        color: #fff;
+      }
+  
+      .reset-button {
+        background-color: #007bff; /* Blue for reset */
+        color: #fff;
+      }
+    }
+  }
+  

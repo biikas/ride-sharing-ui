@@ -1,0 +1,35 @@
+<nb-layout>
+    <nb-layout-column>
+      <nb-card class="json-formatter-card">
+        <nb-card-header>
+          <h2>JSON Formatter</h2>
+        </nb-card-header>
+        <nb-card-body>
+          <div class="json-formatter-container">
+            <!-- JSON Input Section -->
+            <div class="input-section">
+              <label for="json-input">Paste or Type JSON:</label>
+              <textarea
+                nbInput
+                id="json-input"
+                [(ngModel)]="jsonInput"
+                (input)="formatJson()"
+                placeholder="Paste or type JSON here"
+                class="json-input-area"
+              ></textarea>
+            </div>
+  
+            <!-- Output Section -->
+            <div class="output-section">
+              <label>Formatted JSON:</label>
+              <pre class="json-output">{{ formattedJson }}</pre>
+              <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+              
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </nb-layout-column>
+  </nb-layout>
+  

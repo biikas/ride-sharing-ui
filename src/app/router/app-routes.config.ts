@@ -1,26 +1,34 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from '../pages/about/about.component';
-import { HomeCompnent } from '../pages/home/home.component';
 import { LayoutComponent } from '../pages/layout/layout.component';
-import { LoginComponent } from '../pages/login/login.component';
-import { RiderRegisterComponent } from '../pages/rider-register/rider-register.component';
-import { DriverRegisterComponent } from '../pages/driver-register/driver-register.component';
-import { HereMapComponent } from '../pages/map/map.component';
-import { ContactComponent } from '../pages/contact/contact.component';
+import { PasswordGeneratorComponent } from '../pages/password-generator/password-generator.component';
+import { JsonFormatterComponent } from '../pages/jsonformatter/jsonformatter.component';
+import { StopWatchComponent } from '../pages/stop-watch/stop-watch.component';
+
 
 export const AppRoutes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'home', component: HomeCompnent },
-      { path: 'about', component: AboutComponent },
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: 'contact', component: ContactComponent },
+      // { path: 'programmers-tools', component: ProgrammersToolsComponent },
+      // { path: 'students-tools', component: StudentsToolsComponent },
+      // { path: 'writers-tools', component: WritersToolsComponent },
+      // { path: 'business-tools', component: BusinessToolsComponent },
+      // { path: 'general-tools', component: GeneralToolsComponent },
     ],
+
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'rider-register', component: RiderRegisterComponent },
-  { path: 'driver-register', component: DriverRegisterComponent },
-  { path: 'map', component: HereMapComponent },
+  {
+    path: 'password-generator',
+    component: PasswordGeneratorComponent
+  },
+  {
+    path:'json-formatter',
+    component:JsonFormatterComponent
+  },
+  {
+    path:'stop-watch',
+    component:StopWatchComponent
+  },
+  { path: '**', redirectTo: '' },
 ];

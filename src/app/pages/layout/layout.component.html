@@ -1,5 +1,32 @@
-<!-- layout.component.html -->
-<app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<nb-layout>
+  <nb-layout-column>
+    <div class="container">
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search for tools..."
+          [(ngModel)]="searchQuery"
+          (input)="filterTools()"
+          class="search-input"
+        />
+      </div>
+
+      <div class="welcome-container">
+        <h2>Welcome back!</h2>
+        <p>What would you like to work on today?</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card" *ngFor="let tool of filteredTools" (click)="navigateToTool(tool.link)">
+          <div class="card-icon">
+            <!-- <nb-icon [icon]="tool.icon"></nb-icon> -->
+          </div>
+          <div class="card-body">
+            <h3>{{ tool.name }}</h3>
+            <p>{{ tool.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>
